@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f7; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #007bff; /* Blue heading */
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #28a745; /* Green subheading */
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.result-box p {
+    margin: 5px 0;
+}
+
+.status-lulus {
+    color: #28a745; /* Green for LULUS */
+    font-size: 1.2em;
+}
+
+.status-tidak-ditemukan {
+    color: #dc3545; /* Red for not found */
+    font-size: 1.1em;
+}

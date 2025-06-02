@@ -1,0 +1,41 @@
+const studentsData = [
+    { NISN: "0124235516", NAMA: "AGIL BEKTI FERNANDO", STATUS: "LULUS" },
+    { NISN: "0121318290", NAMA: "AINUN AISYAH", STATUS: "LULUS" },
+    { NISN: "0134460682", NAMA: "ALIKA SYAKIRA", STATUS: "LULUS" },
+    { NISN: "0134447309", NAMA: "ALYA PRISCILLA ROHMAN", STATUS: "LULUS" },
+    { NISN: "0124841446", NAMA: "ANDIKA PRASTYA", STATUS: "LULUS" },
+    { NISN: "0138246893", NAMA: "AZKA NAUFAL PRAMUDYA", STATUS: "LULUS" },
+    { NISN: "0117600971", NAMA: "CHALIS ASSYIVANI", STATUS: "LULUS" },
+    { NISN: "0127105968", NAMA: "FIAN ANUGRAH RAMADHAN", STATUS: "LULUS" },
+    { NISN: "3122148930", NAMA: "FITRI AFAZA RAHMADANI", STATUS: "LULUS" },
+    { NISN: "0127009488", NAMA: "MELA MAYSAROH", STATUS: "LULUS" },
+    { NISN: "3128938413", NAMA: "MUHAMMAD FAZA MUQTAFA", STATUS: "LULUS" },
+    { NISN: "0137649486", NAMA: "NAJMI FEBRINA", STATUS: "LULUS" },
+    { NISN: "3131994972", NAMA: "RAFARDHAN ATHALLA", STATUS: "LULUS" },
+    { NISN: "0127417427", NAMA: "RAJJA ZENDRADINATA", STATUS: "LULUS" },
+    { NISN: "0124810768", NAMA: "VINTAN MIFTAHUL JANNAH", STATUS: "LULUS" },
+    { NISN: "0125565060", NAMA: "ZIDAN DEVANDRA", STATUS: "LULUS" }
+];
+
+function checkStatus() {
+    const nisnInput = document.getElementById('nisnInput').value.trim();
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = ''; // Clear previous results
+
+    if (nisnInput === "") {
+        resultDiv.innerHTML = '<p class="status-tidak-ditemukan">Mohon masukkan NISN Anda.</p>';
+        return;
+    }
+
+    const foundStudent = studentsData.find(student => student.NISN === nisnInput);
+
+    if (foundStudent) {
+        resultDiv.innerHTML = `
+            <p><strong>NISN:</strong> ${foundStudent.NISN}</p>
+            <p><strong>Nama:</strong> ${foundStudent.NAMA}</p>
+            <p><strong>Status:</strong> <span class="status-lulus">${foundStudent.STATUS}</span></p>
+        `;
+    } else {
+        resultDiv.innerHTML = '<p class="status-tidak-ditemukan">NISN tidak ditemukan. Pastikan Anda memasukkan NISN yang benar.</p>';
+    }
+}
